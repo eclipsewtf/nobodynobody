@@ -15,14 +15,6 @@ repeat
  local menu = game:GetObjects("rbxassetid://18276958062")[1] 
  local tabholder = menu.bg.bg.bg.bg.bg.bg.main.group;
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons;
- for _, obj in pairs(menu:GetDescendants()) do
-    if obj.Name:lower():find('userlabel') then
-        obj.Text = 'active user: <font color="rgb(32, 3, 252)">' .. game.Players.LocalPlayer.Name .. '</font>'
-    end
-    if obj.Name:lower():find('buildlabel') then
-        obj.Text = 'build: <font color="rgb(32, 3, 252)">Public</font>'
-    end
- end
  
  --vars
  local CloneCore = cloneref(game.CoreGui)
@@ -297,7 +289,7 @@ repeat
  end
  
  local library = {
-    Title = 'nero.<font color="rgb(32, 3, 252)">wtf</font> || fallen',
+    Title = 'Nero.<font color="rgb(32, 3, 252)">wtf</font>',
     keybind = Enum.KeyCode.RightBracket,
     Watermark = createWatermark(),
        Colors = {
@@ -369,46 +361,6 @@ repeat
     menu_text_label.TextColor3 = Color3.fromRGB(75, 75, 75)
     menu_text_label.TextSize = 10
     menu_text_label.TextStrokeTransparency = 0.000
- 
-    local BottomBar = Instance.new("Frame", menu.bg)
-    local BuildLabel = Instance.new("TextLabel", BottomBar)
-    local ActiveUserLabel = Instance.new("TextLabel", BottomBar)
- 
-    BottomBar.Name = "BottomBar"
-    BottomBar.BackgroundColor3 = Color3.fromRGB(11, 11, 11)
-    BottomBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    BottomBar.BorderSizePixel = 0
-    BottomBar.Position = UDim2.new(0.00487692887, 1, 0.973760962, -25)
-    BottomBar.Size = UDim2.new(1.02570701, -2, -0.00615911139, 24)
- 
-    BuildLabel.Name = "BuildLabel"
-    BuildLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    BuildLabel.BackgroundTransparency = 1.000
-    BuildLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    BuildLabel.BorderSizePixel = 0
-    BuildLabel.Position = UDim2.new(0.0005, 1, 0, -10)
-    BuildLabel.Size = UDim2.new(-0.00151476054, 200, 2.14484048, -1)
-    BuildLabel.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
-    BuildLabel.RichText = true
-    BuildLabel.Text = "build: <font color=\"rgb(32, 3, 252)\">public</font>"
-    BuildLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
-    BuildLabel.TextSize = 10
-    BuildLabel.TextWrapped = true
-    BuildLabel.TextXAlignment = Enum.TextXAlignment.Left
- 
-    ActiveUserLabel.Name = "ActiveUserLabel"
-    ActiveUserLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    ActiveUserLabel.BackgroundTransparency = 1.000
-    ActiveUserLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    ActiveUserLabel.BorderSizePixel = 0
-    ActiveUserLabel.Position = UDim2.new(1.0055, -204, -1.46925938, 1)
-    ActiveUserLabel.Size = UDim2.new(0.00125635799, 200, 4.04341888, -1)
-    ActiveUserLabel.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
-    ActiveUserLabel.RichText = true
-    ActiveUserLabel.Text = "active user: <font color=\"rgb(32, 3, 252)\">7d</font>"
-    ActiveUserLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
-    ActiveUserLabel.TextSize = 10
-    ActiveUserLabel.TextXAlignment = Enum.TextXAlignment.Right
  
     for _, obj in pairs(menu:GetDescendants()) do
         if obj.Name:lower():find('name_esp') then
